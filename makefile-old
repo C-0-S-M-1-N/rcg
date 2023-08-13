@@ -6,7 +6,7 @@ MV = mv -v
 SU = sudo
 SOFT = rcg
 BIN = /usr/local/bin/$(SOFT)
-OBJ = main.o array.o creation.o cases.o
+OBJ = main.o array.o creation.o
 
 all: $(SOFT)
 
@@ -20,9 +20,6 @@ array.o: src/array.c
 	$(CC) $(CFLAGS) -c $<
 
 creation.o: src/creation.c
-	$(CC) $(CFLAGS) -c $<
-
-cases.o: src/cases.c
 	$(CC) $(CFLAGS) -c $<
 
 install: $(SOFT)
